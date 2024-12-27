@@ -11,4 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class AdmissionDto {
 
+    private Long admissionId;
+
+    private Integer fees;
 }

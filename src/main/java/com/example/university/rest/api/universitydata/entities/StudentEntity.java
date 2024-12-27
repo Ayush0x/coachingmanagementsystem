@@ -19,5 +19,21 @@ public class StudentEntity {
     @Column(nullable = false)
     private String studentName;
 
+    private Integer studentAge;
 
+    private String studentEmail;
+
+    private Integer studentContactNumber;
+
+    private String studentFatherName;
+
+    private String studentMotherName;
+
+    private Integer studentFatherContactNumber;
+
+    private Integer studentMotherContactNumber;
+
+    private String studentAddress;
+
+    private String bloodGroup;
 }

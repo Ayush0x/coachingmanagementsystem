@@ -11,5 +11,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ProfessorDto {
     private Long professorId;
+
     private String professorName;
+
+    private Integer professorContactNumber;
+
+    private String professorEmail;
+
+    private String professorAddress;
+
+    private String bloodGroup;
 }

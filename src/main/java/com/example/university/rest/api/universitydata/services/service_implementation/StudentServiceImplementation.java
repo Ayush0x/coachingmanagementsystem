@@ -96,4 +96,5 @@ public class StudentServiceImplementation implements StudentService {
         StudentEntity savedStudent=studentRepository.save(newStudent);
         return modelMapper.map(savedStudent, StudentDto.class);
     }
+    
 }
