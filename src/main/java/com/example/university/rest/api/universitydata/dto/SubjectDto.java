@@ -10,4 +10,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SubjectDto {
+    private Long subjectId;
+
+    private String subjectName;
+
+    private String subjectCode;
+
+    private String subjectDescription;
+
+    private Integer subjectCredits;
 }

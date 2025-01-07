@@ -14,4 +14,5 @@ public class AdmissionDto {
     private Long admissionId;
 
     private Integer fees;
+
 }

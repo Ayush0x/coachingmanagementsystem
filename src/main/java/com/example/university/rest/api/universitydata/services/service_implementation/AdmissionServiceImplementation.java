@@ -83,7 +83,7 @@ public class AdmissionServiceImplementation implements AdmissionService {
         AdmissionEntity admission=admissionRepository.findById(id).get();
         update.forEach((feild,value)->
         {
-            Field fieldToBeUpdated= ReflectionUtils.findRequiredField(ProfessorEntity.class,feild);
+            Field fieldToBeUpdated= ReflectionUtils.findRequiredField(AdmissionEntity.class,feild);
             fieldToBeUpdated.setAccessible(true);
             ReflectionUtils.setField(fieldToBeUpdated,admission,value);
         });
