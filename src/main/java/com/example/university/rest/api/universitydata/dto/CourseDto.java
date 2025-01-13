@@ -9,11 +9,13 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class SubjectDto {
-    private Long subjectId;
+public class CourseDto {
 
-    private String subjectName;
+    private Long courseId;
 
-    private String subjectDescription;
+    private String courseName;
 
+    private String courseDuration;
+
+    private String courseDescription;
 }

@@ -27,7 +27,7 @@ public class SubjectController {
     {
         Optional<SubjectDto> subjectDto=subjectService.getSubjectById(id);
         return subjectDto.map(subjectDto1 -> ResponseEntity.ok(subjectDto1))
-                .orElseThrow(()-> new ResourceNotFoundException("Unable to fetch admission records of the student"));
+                .orElseThrow(()-> new ResourceNotFoundException("Unable to fetch the subject"));
     }
 
     @GetMapping
@@ -60,11 +60,9 @@ public class SubjectController {
     @DeleteMapping(path = "/{subjectId}")
     public ResponseEntity<Boolean> deleteSubjectById(@PathVariable Long id)
     {
-        {
             boolean gotDeleted=subjectService.deleteSubjectById(id);
             if(gotDeleted) return ResponseEntity.ok(true);
             return ResponseEntity.notFound().build();
-        }
     }
 
 }

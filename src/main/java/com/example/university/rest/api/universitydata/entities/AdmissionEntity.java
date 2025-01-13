@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "Admission Records")
+@Table(name = "admission")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -18,4 +18,12 @@ public class AdmissionEntity {
     private Long admissionId;
 
     private Integer fees;
+
+    @ManyToOne
+    @JoinColumn(name = "Student_Id")
+    private StudentEntity student;
+
+    @ManyToOne
+    @JoinColumn(name = "Course_Id")
+    private CourseEntity course;
 }

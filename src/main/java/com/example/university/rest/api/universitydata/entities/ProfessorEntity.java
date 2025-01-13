@@ -3,8 +3,10 @@ package com.example.university.rest.api.universitydata.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
-@Table(name = "Professor Table")
+@Table(name = "professor")
 @Getter
 @Setter
 @Builder
@@ -18,11 +20,14 @@ public class ProfessorEntity {
 
     private String professorName;
 
-    private Integer professorContactNumber;
+    private Long professorContactNumber;
 
     private String professorEmail;
 
     private String professorAddress;
 
     private String bloodGroup;
+
+    @OneToMany(mappedBy = "professor",cascade = CascadeType.ALL)
+    private List<SubjectEntity> subjectEntities;
 }

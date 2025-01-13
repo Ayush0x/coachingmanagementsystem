@@ -19,15 +19,15 @@ public class StudentDto {
 
     private String studentEmail;
 
-    private Integer studentContactNumber;
+    private Long studentContactNumber;
 
     private String studentFatherName;
 
     private String studentMotherName;
 
-    private Integer studentFatherContactNumber;
+    private Long studentFatherContactNumber;
 
-    private Integer studentMotherContactNumber;
+    private Long studentMotherContactNumber;
 
     private String studentAddress;
 

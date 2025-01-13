@@ -8,6 +8,7 @@ import com.example.university.rest.api.universitydata.entities.SubjectEntity;
 import com.example.university.rest.api.universitydata.exceptions.ResourceNotFoundException;
 import com.example.university.rest.api.universitydata.repositories.SubjectRepository;
 import com.example.university.rest.api.universitydata.services.SubjectService;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -22,6 +23,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@AllArgsConstructor
 @Slf4j
 public class SubjectServiceImplementation implements SubjectService {
 

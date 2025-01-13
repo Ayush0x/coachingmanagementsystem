@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "Subject Table")
+@Table(name = "subject")
 @Getter
 @Setter
 @Builder
@@ -18,9 +18,13 @@ public class SubjectEntity {
 
     private String subjectName;
 
-    private String subjectCode;
-
     private String subjectDescription;
 
-    private Integer subjectCredits;
+    @ManyToOne
+    @JoinColumn(name = "Professor_Id")
+    private ProfessorEntity professor;
+
+    @ManyToOne
+    @JoinColumn(name = "Course_Id")
+    private CourseEntity course;
 }

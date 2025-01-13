@@ -3,8 +3,10 @@ package com.example.university.rest.api.universitydata.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
-@Table(name = "Student Table")
+@Table(name = "student")
 @Getter
 @Setter
 @Builder
@@ -23,17 +25,20 @@ public class StudentEntity {
 
     private String studentEmail;
 
-    private Integer studentContactNumber;
+    private Long studentContactNumber;
 
     private String studentFatherName;
 
     private String studentMotherName;
 
-    private Integer studentFatherContactNumber;
+    private Long studentFatherContactNumber;
 
-    private Integer studentMotherContactNumber;
+    private Long studentMotherContactNumber;
 
     private String studentAddress;
 
     private String bloodGroup;
+
+    @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
+    private List<AdmissionEntity> admissionEntities;
 }

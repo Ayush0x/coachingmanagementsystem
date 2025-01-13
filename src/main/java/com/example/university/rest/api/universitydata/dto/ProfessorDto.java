@@ -10,11 +10,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ProfessorDto {
+
     private Long professorId;
 
     private String professorName;
 
-    private Integer professorContactNumber;
+    private Long professorContactNumber;
 
     private String professorEmail;
 
