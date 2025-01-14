@@ -43,8 +43,8 @@ A comprehensive management system designed for coaching institutes to streamline
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/coaching-institute-management-system.git
-   cd coaching-institute-management-system
+   git clone https://github.com/Ayush0x/coachingmanagementsystem.git
+   cd coachingmanagementsystem
 2. Configure the database:
 
 - Update the application.properties file in src/main/resources/ with your database credentials.
