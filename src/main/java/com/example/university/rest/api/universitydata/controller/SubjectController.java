@@ -16,7 +16,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/subjectDetails")
-@AllArgsConstructor
+//@AllArgsConstructor
 @RequiredArgsConstructor
 public class SubjectController {
 

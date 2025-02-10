@@ -17,7 +17,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/admissionRecords")
-@AllArgsConstructor
+//@AllArgsConstructor
 @RequiredArgsConstructor
 public class AdmissionController {
 

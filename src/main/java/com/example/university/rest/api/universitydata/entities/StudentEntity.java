@@ -41,4 +41,7 @@ public class StudentEntity {
 
     @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
     private List<AdmissionEntity> admissionEntities;
+
+    @OneToOne
+    private UserEntity user;
 }

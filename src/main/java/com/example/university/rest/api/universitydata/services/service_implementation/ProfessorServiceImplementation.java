@@ -20,7 +20,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-@AllArgsConstructor
+//@AllArgsConstructor
 @RequiredArgsConstructor
 @Slf4j
 public class ProfessorServiceImplementation implements ProfessorService {

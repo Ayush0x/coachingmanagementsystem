@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@AllArgsConstructor
+//@AllArgsConstructor
 @RequiredArgsConstructor
 @RequestMapping("/students")
 public class StudentController {
