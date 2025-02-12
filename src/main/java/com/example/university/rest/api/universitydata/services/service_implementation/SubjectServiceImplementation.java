@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-@AllArgsConstructor
+//@AllArgsConstructor
 @Slf4j
 public class SubjectServiceImplementation implements SubjectService {
 

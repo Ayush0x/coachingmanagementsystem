@@ -17,7 +17,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/professor")
-@AllArgsConstructor
+//@AllArgsConstructor
 @RequiredArgsConstructor
 public class ProfessorController {
 

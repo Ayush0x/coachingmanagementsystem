@@ -16,7 +16,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/course")
-@AllArgsConstructor
+//@AllArgsConstructor
 @RequiredArgsConstructor
 public class CourseController {
 
@@ -30,7 +30,7 @@ public class CourseController {
                 .orElseThrow(()-> new ResourceNotFoundException("Unable to fetch course"));
     }
 
-    @GetMapping
+    @GetMapping(path = "/{allCourses}")
     public ResponseEntity<List<CourseDto>> getAllCourses()
     {
         return ResponseEntity.ok(courseService.getAllCourses());
