@@ -7,6 +7,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+/**
+ * The AdmissionService interface defines the operations for managing admission records.
+ * It provides methods to perform create, read, update, and delete (CRUD) functionality
+ * for admission-related data within the system. This service acts as a contract to interact
+ * with admission records in a consistent manner.
+ */
 @Service
 public interface AdmissionService {
     Optional<AdmissionDto> getRecordById(Long id);

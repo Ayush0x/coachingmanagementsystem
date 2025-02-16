@@ -14,6 +14,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+/**
+ * The SubjectController class provides REST API endpoints for managing subjects.
+ * It handles operations such as retrieving subject details, creating new subjects,
+ * updating subjects, and deleting subjects.
+ */
 @RestController
 @RequestMapping(path = "/subjectDetails")
 //@AllArgsConstructor

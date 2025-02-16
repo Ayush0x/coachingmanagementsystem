@@ -17,6 +17,26 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+/**
+ * Service implementation for managing and handling student-related operations.
+ * This class provides the implementation of various functionalities defined
+ * in the StudentService interface and interacts with the persistence layer
+ * through StudentRepository.
+ *
+ * Responsibilities include:
+ * - Fetching student details by ID.
+ * - Retrieving all students.
+ * - Creating a new student record.
+ * - Updating an existing student's details.
+ * - Deleting a student by ID.
+ * - Updating specific fields of a student by ID using Reflection.
+ *
+ * It utilizes ModelMapper for entity-to-DTO conversion and logs
+ * important information or errors using Slf4j.
+ *
+ * Custom error handling is integrated for cases where a student is not found
+ * or already exists using ResourceNotFoundException or RuntimeException.
+ */
 @Service
 @RequiredArgsConstructor
 @Slf4j

@@ -21,6 +21,25 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+/**
+ * The AdmissionServiceImplementation class provides the implementation of the AdmissionService interface.
+ * It handles the core business logic for managing admission-related records, interacting with the data
+ * persistence layer through AdmissionRepository and mapping entities to DTOs using ModelMapper.
+ *
+ * Responsibilities include:
+ * - Retrieving specific admissions by ID
+ * - Retrieving all admission records
+ * - Creating new admission records
+ * - Updating existing admission records completely or partially
+ * - Deleting admission records by ID
+ *
+ * Dependencies:
+ * - AdmissionRepository: For interacting with the database layer.
+ * - ModelMapper: For mapping between entity and DTO objects.
+ *
+ * Uses logging through Lombok's @Slf4j for error and event tracking.
+ * Throws ResourceNotFoundException when specific admission records are not found.
+ */
 @Service
 //@RequiredArgsConstructor
 @AllArgsConstructor

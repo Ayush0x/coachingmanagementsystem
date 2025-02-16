@@ -22,6 +22,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 
+/**
+ * The AuthController class provides REST API endpoints for user authentication
+ * and authorization functionalities. It handles operations such as user signup,
+ * login, and token refresh.
+ */
 @RestController
 @RequestMapping(path = "/auth")
 @AllArgsConstructor

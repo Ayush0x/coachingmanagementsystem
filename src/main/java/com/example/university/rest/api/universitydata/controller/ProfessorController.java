@@ -15,6 +15,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+/**
+ * The ProfessorController class provides REST API endpoints for managing professor data.
+ * It includes operations for retrieving, creating, updating, and deleting professor records
+ * within the system.
+ */
 @RestController
 @RequestMapping(path = "/professor")
 //@AllArgsConstructor

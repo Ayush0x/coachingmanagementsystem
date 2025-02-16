@@ -14,6 +14,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+/**
+ * The CourseController class provides REST API endpoints for managing courses
+ * within the system. It supports operations such as retrieving course details
+ * by ID or name, fetching all courses, creating new courses, updating course
+ * details, and deleting courses.
+ */
 @RestController
 @RequestMapping(path = "/course")
 //@AllArgsConstructor

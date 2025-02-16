@@ -13,6 +13,25 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Represents the UserEntity class which is a JPA entity corresponding to the 'user' table in the database.
+ *
+ * This class implements the {@link UserDetails} interface from Spring Security and serves as the
+ * foundational entity for user authentication and authorization functionalities within the application.
+ *
+ * Key features:
+ * - Each user is uniquely identified by their `id`.
+ * - The `email` field is unique and acts as the username for authentication.
+ * - Includes user attributes such as `userName`, `password`, and associated roles.
+ * - Roles are represented as a collection of {@link Role} enums, stored using JPA's {@code @ElementCollection}.
+ * - Overrides `getAuthorities` to provide a dynamically computed collection of {@link GrantedAuthority}
+ *   that maps user roles to security permissions.
+ *
+ * Annotations and Behavior:
+ * - Uses Lombok annotations for boilerplate code such as getter/setter, constructors, and builders.
+ * - Integrates Spring Security's user detail mechanisms for authentication.
+ * - The class is annotated with JPA annotations for entity mapping and persistence.
+ */
 @Entity
 @Getter
 @Setter

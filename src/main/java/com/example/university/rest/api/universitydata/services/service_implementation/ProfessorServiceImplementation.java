@@ -19,6 +19,25 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+/**
+ * Implementation of the ProfessorService interface providing CRUD operations
+ * and additional logic for managing professors in the university system.
+ *
+ * This class interacts with the ProfessorRepository to perform operations
+ * like fetching, creating, updating, and deleting ProfessorEntity records,
+ * and uses ModelMapper to map entities to DTOs and vice versa.
+ *
+ * Key functionalities include:
+ * - Retrieving a professor by their ID.
+ * - Fetching all professors.
+ * - Creating a new professor.
+ * - Updating an existing professor's information.
+ * - Deleting a professor by their ID.
+ * - Updating specific fields of a professor by their ID.
+ *
+ * Custom exceptions such as ResourceNotFoundException are thrown when
+ * operations are attempted on non-existing records.
+ */
 @Service
 //@AllArgsConstructor
 @RequiredArgsConstructor

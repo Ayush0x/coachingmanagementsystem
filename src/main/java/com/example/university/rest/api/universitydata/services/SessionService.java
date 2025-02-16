@@ -13,6 +13,24 @@ import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * The SessionService class handles operations related to user sessions,
+ * including the generation of new sessions and validation of existing sessions.
+ *
+ * This service ensures that a user does not exceed the defined session limit
+ * and manages the removal of the least recently used session when the limit is reached.
+ *
+ * Dependencies:
+ * - SessionRepository: Interacts with the database to manage session data.
+ *
+ * Core Functionalities:
+ * - generateNewSession(UserEntity user, String refreshToken):
+ *   Creates a new session for a user and enforces a session limit by deleting the least
+ *   recently used session if necessary.
+ * - validateSession(String refreshToken):
+ *   Validates an existing session using a given refresh token, updating the session's
+ *   "last used" timestamp to reflect the current time.
+ */
 @Service
 @RequiredArgsConstructor
 public class SessionService {

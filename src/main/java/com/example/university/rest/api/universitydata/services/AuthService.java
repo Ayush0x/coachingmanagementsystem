@@ -10,6 +10,18 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
+/**
+ * Service class that handles user authentication and session management.
+ * It provides functionalities for user login and token refresh operations.
+ * This service integrates with the security framework for authentication,
+ * generates JWT tokens for authenticated users, and manages user sessions.
+ *
+ * Dependencies:
+ * - {@link AuthenticationManager}: For authentication of user credentials.
+ * - {@link JwtService}: For generating and managing JWT tokens.
+ * - {@link UserService}: For accessing user details and information.
+ * - {@link SessionService}: For managing user sessions with refresh tokens.
+ */
 @Service
 @RequiredArgsConstructor
 public class AuthService {

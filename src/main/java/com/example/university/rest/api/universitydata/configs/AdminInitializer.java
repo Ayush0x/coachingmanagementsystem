@@ -10,6 +10,25 @@ import org.springframework.stereotype.Component;
 
 import java.util.Collections;
 
+/**
+ * AdminInitializer is a component class responsible for initializing a default
+ * admin user within the application's data store if it does not already exist.
+ * It ensures that a user with administrative privileges is available for managing
+ * the application from the start.
+ *
+ * This class leverages Spring's CommandLineRunner to execute the initialization
+ * logic upon application startup.
+ *
+ * Key operations:
+ * 1. Checks the existence of a user with the predefined admin email.
+ * 2. If the admin user does not exist, it creates a new user, assigns a secure
+ *    password, and grants the ADMIN role.
+ * 3. Persists the newly created admin user in the database.
+ *
+ * Dependencies:
+ * - UserRepository: Used to check and save user information.
+ * - PasswordEncoder: Used to securely encode passwords before saving them.
+ */
 @Component
 public class AdminInitializer {
 

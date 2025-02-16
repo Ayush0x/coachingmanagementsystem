@@ -14,6 +14,38 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+/**
+ * The WebSecurityFilter class is a Spring Security configuration class responsible for
+ * configuring security filters and access rules for the application.
+ *
+ * This class leverages multiple Spring Security annotations and components to set up
+ * security mechanisms such as CSRF protection, request authorization, session management,
+ * and custom JWT-based authentication.
+ *
+ * Components:
+ * 1. SecurityFilterChain:
+ *    - Configures security settings for HTTP requests, including:
+ *      - Disabling CSRF protection.
+ *      - Allowing public access to specified endpoints.
+ *      - Enforcing authentication for all other endpoints.
+ *    - Utilizes a stateless session management policy to support token-based authentication.
+ *    - Adds a custom JwtAuthFilter to the filter chain, which processes incoming requests
+ *      to validate and authenticate JWT tokens.
+ *
+ * 2. AuthenticationManager:
+ *    - Exposes an AuthenticationManager bean, enabling the application to handle
+ *      authentication requests.
+ *
+ * Annotations:
+ * - @Configuration: Marks this class as a Spring configuration class.
+ * - @EnableWebSecurity: Enables Spring Security and integrates its configuration.
+ * - @EnableMethodSecurity: Enables method-level security, such as using @Secured annotations.
+ * - @RequiredArgsConstructor: Generates a constructor for initializing final fields.
+ *
+ * Dependencies:
+ * - JwtAuthFilter: A custom filter responsible for extracting and validating JWT tokens
+ *   from incoming HTTP requests.
+ */
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor

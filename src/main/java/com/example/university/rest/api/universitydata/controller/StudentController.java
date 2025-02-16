@@ -13,6 +13,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+/**
+ * The StudentController class provides REST API endpoints to manage student-related operations.
+ * It allows for operations such as retrieving student information, adding new students, updating
+ * student details, and deleting student records.
+ */
 @RestController
 //@AllArgsConstructor
 @RequiredArgsConstructor

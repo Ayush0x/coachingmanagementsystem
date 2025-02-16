@@ -15,6 +15,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+/**
+ * Controller class for managing admission records. Provides endpoints to perform
+ * CRUD operations on admission data of students.
+ *
+ * This controller interacts with {@link AdmissionService} to handle business logic
+ * related to admission records.
+ */
 @RestController
 @RequestMapping(path = "/admissionRecords")
 //@AllArgsConstructor

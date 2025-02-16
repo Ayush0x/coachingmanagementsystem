@@ -5,6 +5,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Represents the data transfer object for course-specific information.
+ * This class encapsulates details about a course such as its ID, name,
+ * duration, and description.
+ *
+ * It is used to transfer course data between different layers of the application,
+ * facilitating the management and persistence of course information.
+ */
 @Data
 @Builder
 @AllArgsConstructor

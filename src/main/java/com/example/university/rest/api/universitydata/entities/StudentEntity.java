@@ -5,6 +5,22 @@ import lombok.*;
 
 import java.util.List;
 
+/**
+ * Represents the student entity corresponding to the `student` table in the database.
+ * This entity captures the details of students enrolled in the university and their associated information.
+ *
+ * Features of the class include:
+ * - Uniquely identified by `studentId`.
+ * - Contains several attributes such as the student's name, age, email, contact details, and address.
+ * - Includes additional information about the student's father and mother, including their names and contact details.
+ * - Captures optional details about the student's blood group.
+ *
+ * Entity Relationships:
+ * - One-to-many relationship with {@code AdmissionEntity}, representing the admissions associated with the student.
+ * - One-to-one relationship with {@code UserEntity}, representing the user account associated with the student.
+ *
+ * This entity is managed by JPA with various annotations for persistence, constraints, and relationships.
+ */
 @Entity
 @Table(name = "student")
 @Getter

@@ -5,6 +5,19 @@ import lombok.*;
 
 import java.util.List;
 
+/**
+ * Represents the course entity corresponding to the `course` table in the database.
+ * This entity captures the details of a course offered by the university.
+ *
+ * Features of the class include:
+ * - Uniquely identified by `courseId`.
+ * - Includes properties for the course's name, duration, and description.
+ * - Defines relationships with other entities:
+ *   - A one-to-many relationship with {@link AdmissionEntity}, representing the admissions associated with the course.
+ *   - A one-to-many relationship with {@link SubjectEntity}, representing the subjects included in the course.
+ *
+ * This entity is annotated as JPA-managed and integrates common database and ORM configurations.
+ */
 @Entity
 @Table(name = "course")
 @Getter

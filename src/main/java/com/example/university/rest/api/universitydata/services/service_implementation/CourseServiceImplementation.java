@@ -22,6 +22,35 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 
+/**
+ * Implementation of the {@link CourseService} interface to provide business logic
+ * for managing course-related operations. This class interacts with the data
+ * access layer through {@link CourseRepository} and maps data between entities
+ * and DTOs using {@link ModelMapper}.
+ *
+ * Responsibilities:
+ * - Retrieve course details by ID or name.
+ * - Retrieve a list of all available courses.
+ * - Add new courses after verifying nonexistence.
+ * - Update details of an existing course.
+ * - Delete courses by their ID.
+ *
+ * Exception Handling:
+ * Throws {@link ResourceNotFoundException} for operations involving non-existent courses.
+ * Throws {@link RuntimeException} when attempting to create a course that already exists.
+ *
+ * Methods Overview:
+ * - {@code getCourseById}: Fetches an {@link Optional} of {@link CourseDto} by the course ID.
+ * - {@code getAllCourses}: Retrieves a list of all courses mapped to {@link CourseDto}.
+ * - {@code createNewCourse}: Adds a new course to the database.
+ * - {@code updateCourseDetails}: Updates specific fields of a course entity by ID.
+ * - {@code deleteCourseById}: Deletes a course by its ID and confirms operation.
+ * - {@code getCourseByName}: Fetches an {@link Optional} of {@link CourseDto} by the course name.
+ * - {@code isExisting}: Utility method to verify course existence by ID.
+ *
+ * This implementation is annotated with `@Service` to indicate that it is a service
+ * layer component and uses Lombok annotations for boilerplate reduction.
+ */
 @Service
 @RequiredArgsConstructor
 //@AllArgsConstructor

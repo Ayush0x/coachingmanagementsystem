@@ -21,6 +21,31 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+/**
+ * Service implementation for managing subjects within the university system.
+ * This class provides the core business logic for handling operations related
+ * to subjects such as retrieval, creation, updating, and deletion of subject data.
+ * It uses {@link SubjectRepository} for database interactions and {@link ModelMapper}
+ * for data conversion between entities and DTOs.
+ *
+ * This class is annotated with:
+ * - {@code @Service}: Marks it as a Spring service bean.
+ * - {@code @RequiredArgsConstructor}: Generates a constructor for final fields during runtime.
+ * - {@code @Slf4j}: Provides logging capabilities.
+ *
+ * Methods:
+ * - {@link #getSubjectById(Long)}: Fetches a specific subject by its unique identifier.
+ * - {@link #getAllSubjects()}: Retrieves a list of all subjects available in the system.
+ * - {@link #createNewSubject(SubjectDto)}: Creates a new subject in the system.
+ * - {@link #updateEsistingSubject(SubjectDto, Long)}: Updates an existing subject by its ID.
+ * - {@link #updateSubjectById(Long, Map)}: Updates specific fields of a subject by its ID.
+ * - {@link #deleteSubjectById(Long)}: Deletes a subject by its unique identifier.
+ * - {@link #isExisting(Long)}: Checks if a subject exists based on its ID.
+ *
+ * Throws:
+ * - {@link ResourceNotFoundException}: If a subject with the given ID does not exist.
+ * - {@link RuntimeException}: If the creation of a subject fails due to duplicate entries.
+ */
 @Service
 @RequiredArgsConstructor
 //@AllArgsConstructor

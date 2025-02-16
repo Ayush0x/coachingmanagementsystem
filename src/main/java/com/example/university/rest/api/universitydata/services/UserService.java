@@ -19,6 +19,26 @@ import org.springframework.stereotype.Service;
 import java.util.Collections;
 import java.util.Optional;
 
+/**
+ * UserService handles the business logic related to user management within the application.
+ * It integrates functionality for user registration, authentication, and retrieval of user details.
+ * This service also implements the {@link UserDetailsService} interface from Spring Security
+ * for authentication purposes.
+ *
+ * Key Methods:
+ * - `signUp(SignUpDto sign)`: Registers a new user in the system. Throws an exception if the email
+ *   is already in use. Encodes passwords and assigns default roles before saving the user.
+ * - `loadUserByUsername(String username)`: Implementation of the `UserDetailsService` method.
+ *   Fetches user details by email for authentication. Throws an exception if the user is not found.
+ * - `getUserById(Long userId)`: Retrieves a user record by its unique identifier. Throws
+ *   an exception if no user is found.
+ * - `getUserByEmail(String email)`: Fetches a user by their email. Returns null if the user is not found.
+ *
+ * Annotations:
+ * - `@Service`: Indicates that this is a service class in the Spring framework.
+ * - `@RequiredArgsConstructor`: Generates a constructor with required (final) dependencies, ensuring
+ *   safe dependency injection.
+ */
 @Service
 @RequiredArgsConstructor
 //@AllArgsConstructor
