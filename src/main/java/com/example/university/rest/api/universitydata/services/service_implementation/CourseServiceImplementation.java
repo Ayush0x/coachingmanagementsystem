@@ -118,8 +118,8 @@ public class CourseServiceImplementation implements CourseService {
     }
 
     @Override
-    public Optional<CourseDto> getCourseByName(String name) {
-        CourseEntity course=courseRepository.findByName(name)
+    public Optional<CourseDto> getCourseByName(String courseName) {
+        CourseEntity course=courseRepository.findByCourseName(courseName)
                 .orElseThrow(()-> new ResourceNotFoundException("Unable to fetch course with the given name"));
         return Optional.ofNullable(modelMapper.map(course, CourseDto.class));
     }

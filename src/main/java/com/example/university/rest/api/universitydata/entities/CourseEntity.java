@@ -31,6 +31,7 @@ public class CourseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long courseId;
 
+    @Column(name = "courseName",nullable = false,unique = true)
     private String courseName;
 
     private String courseDuration;

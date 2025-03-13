@@ -29,8 +29,8 @@ import java.util.Arrays;
  */
 @RestController
 @RequestMapping(path = "/auth")
-@AllArgsConstructor
-//@RequiredArgsConstructor
+//@AllArgsConstructor
+@RequiredArgsConstructor
 public class AuthController {
 
     private final UserService userService;
