@@ -95,4 +95,3 @@ A comprehensive management system designed for coaching institutes to streamline
 
 ## Author
 # Ayush Sharma
-# Connect with me on LinkedIn:- www.linkedin.com/in/ayush-sharma-script-sensei
